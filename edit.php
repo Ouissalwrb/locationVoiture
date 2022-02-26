@@ -1,14 +1,20 @@
+<?php
+
+include('header.php');
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Edit and Update Data PHP</title>
+    <title>Modifier le client</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
 <div class="container mt-2">
   <div class="page-header">
-      <h2>Update Data From Database PHP</h2>
+      <h2>Modifier le client </h2>
   </div>
     <div class="row">
         <div class="col-md-12">
@@ -64,10 +70,15 @@
 
                ?>
               </div>
-              <button type="submit" class="btn btn-primary" value="submit">Submit</button>
+              <button type="submit" class="btn btn-primary" value="submit">Soumettre</button>
             </form>
         </div>
     </div>        
 </div>
 </body>
 </html>
+
+<?php
+
+include('footer.php');
+?>

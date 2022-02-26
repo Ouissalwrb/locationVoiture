@@ -1,8 +1,14 @@
+<?php
+
+include('header.php');
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>Insert data from form to mysql database php</title>
+    <title>Ajouter un client</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 </head>
 <body>
@@ -10,7 +16,7 @@
     <div class="row">
         <div class="col-md-12">
             <div class="page-header">
-                <h2>Add Record From Database PHP</h2>
+                <h2>Ajouter un client</h2>
             </div>
            
             <form action="insert-process.php" method="post">
@@ -62,10 +68,16 @@
 
                ?>
                 </div>
-                <input type="submit" class="btn btn-primary" name="submit" value="save">
+                <input type="submit" class="btn btn-primary" name="submit" value="Soumettre">
             </form>
         </div>
     </div>        
 </div>
 </body>
 </html>
+
+
+<?php
+
+include('footer.php');
+?>

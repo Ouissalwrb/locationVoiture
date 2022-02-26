@@ -1,3 +1,9 @@
+<?php
+
+include('header.php');
+
+
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,10 +36,15 @@
                     <label>Prix Location</label>
                     <input type="number" step="any" name="prix_location" class="form-control" required="">
                 </div>
-                <input type="submit" class="btn btn-primary" name="submit" value="save">
+                <input type="submit" class="btn btn-primary" name="submit" value="Soumettre">
             </form>
         </div>
     </div>        
 </div>
 </body>
 </html>
+
+<?php
+
+include('footer.php');
+?>
