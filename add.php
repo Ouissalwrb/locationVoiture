@@ -35,8 +35,32 @@
                     <input type="text" name="tel" class="form-control" required="">
                 </div>
                 <div class="form-group">
+                <?php 
+                    include 'mydbCon.php';
+                    $query="select * from departement limit 200"; // Fetch all the data from the table customers
+                    $get1=mysqli_query($dbCon,$query);
+                           
+                            if (mysqli_num_rows($get1) > 0) {
+
+                               ?>      
                     <label>Id Ville</label>
-                    <input type="text" name="idville" class="form-control" required="">
+                    <select  class='form-control'value=""   name='idville' required="">
+                        <option value=""> Choisier  </option> 
+                             <?php  
+                                     foreach ($get1 as $row1) {                                         
+                                  ?>   
+                                   <option value="<?php echo $row1['cod_dep']; ?>"> <?php echo $row1['lic_dep']; ?></option>
+                                   <?php
+                                                                      }
+                                     ?>                 
+                     </select>
+                     <?php 
+                              
+                            }else{
+                               echo "no data available";
+                            }
+
+               ?>
                 </div>
                 <input type="submit" class="btn btn-primary" name="submit" value="save">
             </form>
