@@ -17,6 +17,62 @@
                 <div class="form-group">
                     <label>CIN Client</label>
                     <input type="text" name="cin_client" class="form-control" required="">
+                </div>
+                <div class="form-group">
+                <?php 
+                  include 'mydbCon.php';
+                  $query="select * from voitures ";
+                  $get1=mysqli_query($dbCon,$query);
+                           
+                            if (mysqli_num_rows($get1) > 0) {
+
+                               ?>      
+                    <label>Marque de voiture</label>
+                    <select  class='form-control'value=""   name='marque_v' required="">
+                        <option value=""> Choisir  </option> 
+                             <?php  
+                                     foreach ($get1 as $row1) {                                         
+                                  ?>   
+                                   <option value="<?php echo $row1['marque']; ?>"> <?php echo $row1['marque']; ?></option>
+                                   <?php
+                                                                      }
+                                     ?>                 
+                     </select>
+                     <?php 
+                              
+                            }else{
+                               echo "no data available";
+                            }
+
+               ?>
+                </div>
+                <div class="form-group">
+                <?php 
+                  include 'mydbCon.php';
+                  $query="select * from voitures ";
+                  $get1=mysqli_query($dbCon,$query);
+                           
+                            if (mysqli_num_rows($get1) > 0) {
+
+                               ?>      
+                    <label>Modele de voiture</label>
+                    <select  class='form-control'value=""   name='modele_v' required="">
+                        <option value=""> Choisir  </option> 
+                             <?php  
+                                     foreach ($get1 as $row1) {                                         
+                                  ?>   
+                                   <option value="<?php echo $row1['modèle']; ?>"> <?php echo $row1['modèle']; ?></option>
+                                   <?php
+                                                                      }
+                                     ?>                 
+                     </select>
+                     <?php 
+                              
+                            }else{
+                               echo "no data available";
+                            }
+
+               ?>
                 </div>                        
                 <div class="form-group">
                 <?php 
@@ -26,12 +82,12 @@
 
                      $location = mysqli_fetch_assoc($get1);
 
-                     $_SESSION['prix_location'] = $location['prix_location'];
+                     $_PRICE['prix_location'] = $location['prix_location'];
                             
                              if (mysqli_num_rows($get1) > 0) {
  
                                 ?>      
-                    <input type="hidden" name="prix_location" value="<?php echo $_SESSION['prix_location']; ?>" class="form-control" required="">
+                    <input type="hidden" name="prix_location" value="<?php echo $_PRICE['prix_location']; ?>" class="form-control" required="">
                     <label>Numero matricule</label>
                     <select  class='form-control'value=""   name='n_mat' required="" >
                         <option value=""> Choisir  </option> 
