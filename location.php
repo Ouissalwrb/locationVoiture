@@ -31,6 +31,8 @@
               <thead>
                 <tr>
                   <th scope="col">Cin Client</th>
+                  <th scope="col">Marque</th>
+                  <th scope="col">Modele</th>
                   <th scope="col">Num Matricule</th>
                   <th scope="col">Date Dubet</th>
                   <th scope="col">Date Retour</th>
@@ -51,6 +53,9 @@
                     <td><?php echo $array[2];?></td>
                     <td><?php echo $array[3];?></td>
                     <td><?php echo $array[4];?></td>
+                    <td><?php echo $array[5];?></td>
+                    <td><?php echo $array[6];?></td>
+
                 </tr>
                 <?php endwhile; ?>
                 <?php else: ?>
