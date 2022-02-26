@@ -53,7 +53,7 @@ include('header.php');
                                ?>      
                     <label>Id Ville</label>
                     <select  class='form-control'value=""   name='idville' required="">
-                        <option value=""> Choisier  </option> 
+                        <option value=""> Choisir  </option> 
                              <?php  
                                      foreach ($get1 as $row1) {                                         
                                   ?>   
